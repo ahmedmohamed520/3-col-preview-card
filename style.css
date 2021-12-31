@@ -1,0 +1,163 @@
+/* ## Colors
+
+### Primary
+
+Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%)
+
+### Neutral
+
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%) */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    font-family: "Lexend Deca", sans-serif;
+    background-color: hsl(0, 0%, 95%);
+}
+
+.card {
+    width: 75vw;
+    height: 75vh;
+    display: flex;
+    border-radius: 8px;
+
+    position: relative;
+    top: 12.5vh;
+    left: 12.5vw;
+    overflow: hidden;
+}
+.card > * {
+    flex: 0 0 33.3333%;
+    padding: 5rem;
+    position: relative;
+}
+.col--1 {
+    background-color: hsl(31, 77%, 52%);
+    color: hsl(31, 77%, 52%);
+}
+.col--2 {
+    background-color: hsl(184, 100%, 22%);
+    color: hsl(184, 100%, 22%);
+}
+.col--3 {
+    background-color: hsl(179, 100%, 13%);
+    color: hsl(179, 100%, 13%);
+}
+.card-img {
+    display: inline-block;
+    margin-bottom: 3rem;
+}
+.card-title {
+    color: hsl(0, 0%, 95%);
+    text-transform: uppercase;
+    margin-bottom: 3.5rem;
+    font-family: "Big Shoulders Display", cursive;
+    font-size: 4rem;
+}
+.card-text {
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.7;
+}
+.card-btn:link,
+.card-btn:visited {
+    text-decoration: none;
+    display: inline-block;
+    background-color: hsl(0, 0%, 95%);
+    border-radius: 100px;
+    padding: 1.2rem 2.4rem;
+    color: currentColor;
+    border: 0.3rem solid hsl(0, 0%, 95%);
+    transition: 0.2s all ease-out;
+    position: absolute;
+    bottom: 5rem;
+    left: 5rem;
+}
+
+.col--1 .card-btn:hover,
+.col--1 .card-btn:active {
+    background-color: hsl(31, 77%, 52%);
+}
+.col--2 .card-btn:hover,
+.col--2 .card-btn:active {
+    background-color: hsl(184, 100%, 22%);
+}
+.col--3 .card-btn:hover,
+.col--3 .card-btn:active {
+    background-color: hsl(179, 100%, 13%);
+}
+.card-btn:hover,
+.card-btn:active {
+    color: hsl(0, 0%, 95%);
+}
+
+@media screen and (max-width: 1280px) {
+    body {
+        font-size: 1.4rem;
+    }
+    .card-img {
+        margin-bottom: 1.5rem;
+    }
+    .card-title {
+        margin-bottom: 2rem;
+    }
+}
+@media screen and (max-width: 1000px) {
+    body {
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
+    .card-img {
+        margin-bottom: 1.5rem;
+    }
+    .card-title {
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .card > * {
+        padding: 2.5rem;
+    }
+    .card-btn:link,
+    .card-btn:visited {
+        bottom: 2.5rem;
+        left: 2.5rem;
+    }
+}
+@media screen and (max-width: 700px) {
+    body {
+        font-size: 1.5rem;
+        line-height: 1.7;
+    }
+    .card {
+        flex-direction: column;
+    }
+    .card > * {
+        flex: 0 0 100%;
+        padding: 5rem;
+    }
+    .card-btn:link,
+    .card-btn:visited {
+        bottom: 5rem;
+        left: 5rem;
+    }
+    .card-img {
+        margin-bottom: 3rem;
+    }
+    .card-title {
+        margin-bottom: 3.5rem;
+    }
+}
