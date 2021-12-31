@@ -144,6 +144,7 @@ body {
     }
     .card {
         flex-direction: column;
+        height: auto;
     }
     .card > * {
         flex: 0 0 100%;
@@ -151,8 +152,8 @@ body {
     }
     .card-btn:link,
     .card-btn:visited {
-        bottom: 5rem;
-        left: 5rem;
+        position: static;
+        margin-top: 3rem;
     }
     .card-img {
         margin-bottom: 3rem;
